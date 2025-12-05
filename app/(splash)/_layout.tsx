@@ -1,30 +1,7 @@
-import {
-  Inter_400Regular,
-  Inter_500Medium,
-  Inter_600SemiBold,
-  Inter_700Bold
-} from "@expo-google-fonts/inter";
-import { Nunito_400Regular, Nunito_700Bold, useFonts } from "@expo-google-fonts/nunito";
 import { DefaultTheme, ThemeProvider } from '@react-navigation/native';
 import { Stack } from 'expo-router';
-import { ActivityIndicator } from "react-native";
-import "../global.css";
-
 
 export default function RootLayout() {
-
-  const [fontsLoaded] = useFonts({
-    Nunito_400Regular,
-    Nunito_700Bold,
-    Inter_400Regular,
-    Inter_500Medium,
-    Inter_600SemiBold,
-    Inter_700Bold,
-  });
-
-  if (!fontsLoaded) {
-    return <ActivityIndicator />;
-  }
 
   return (
     <ThemeProvider value={DefaultTheme}>
@@ -34,17 +11,17 @@ export default function RootLayout() {
           options={{ headerShown: false }}
         />
         <Stack.Screen
-          name="(tabs)"
+          name="splash-hq1"
           options={{ headerShown: false }
           } />
         <Stack.Screen
-          name="(auth)"
+          name="splash-hq2"
           options={{
             headerShown: false,
           }}
         />
         <Stack.Screen
-          name="(splash)"
+          name="splash-hq3"
           options={{
             headerShown: false,
           }}
