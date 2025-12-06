@@ -1,5 +1,6 @@
 import Button from '@/components/ui/button';
 import Input from '@/components/ui/input';
+import Successcomponet from '@/components/ui/success';
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useRouter } from 'expo-router';
 import React from 'react';
@@ -8,6 +9,7 @@ import { Text, View } from 'react-native';
 import { signupSchema } from '../../schema/signup-schema';
 
 const Signup = () => {
+    const [Success, setSuccess] = React.useState(false);
 
     const router = useRouter();
 
@@ -26,6 +28,10 @@ const Signup = () => {
         resolver: yupResolver(signupSchema),
     });
 
+    if (Success === true) {
+       return <Successcomponet message="Welcome, start creating events, uploading photos, and inviting people to relive the moments with you." 
+         titles="Continue" route="/(auth)" head="Your account is ready" />
+    }
 
     return (
         <View className='w-full h-full flex items-center justify-center bg-gradient-to-b from-[#DDD5E9] to-[#F2FDE8]'>
@@ -34,7 +40,7 @@ const Signup = () => {
                     <Text className='text-[#111827] text-[25px]' 
                      style={{ fontFamily: "Nunito_700Bold" }}
                     >Sign Up</Text>
-                    <Text className='text-[#7A7B7C]'>Create an account to continue!</Text>
+                    <Text className='text-[#7A7B7C]' style={{ fontFamily: " Inter_400Regular," }}>Create an account to continue!</Text>
                 </View>
                 <View className='w-full flex gap-3'>
                     <Input
@@ -82,7 +88,7 @@ const Signup = () => {
                 </View>
                 <View className='w-full flex gap-3'>
                     <Button title='Register' onPress={() => router.push("/(auth)")} />
-                    <View className='flex flex-row items-center justify-center gap-2'>Already have an account? <Text className="cursor-pointer text-[#512F84]" onPress={() => router.push("/(auth)")}  >Log In</Text></View>
+                    <Text className='flex flex-row items-center justify-center gap-2' style={{ fontFamily: " Inter_400Regular," }}>Already have an account? <Text className="cursor-pointer text-[#512F84]" onPress={() => setSuccess(true)} style={{ fontFamily: " Inter_400Regular," }} >Log In</Text></Text>
                 </View>
             </View>
         </View>

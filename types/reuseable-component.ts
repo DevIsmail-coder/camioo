@@ -12,3 +12,10 @@ export type InputProps = {
     error?: string;
     rules?: object;
 };
+
+export type SuccessProps = {
+    message: string;
+    head: string;
+    titles: string;
+    route: string;
+}
