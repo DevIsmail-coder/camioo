@@ -26,6 +26,10 @@ export default function RootLayout() {
           name="reset-password"
           options={{ headerShown: false }}
         />
+          <Stack.Screen
+          name="verification"
+          options={{ headerShown: false }}
+        /> development
       </Stack>
     </ThemeProvider>
   );

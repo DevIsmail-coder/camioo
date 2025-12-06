@@ -31,7 +31,7 @@ const Resetpassword = () => {
                     <Text className='text-[#111827] text-[25px]' 
                      style={{ fontFamily: "Nunito_700Bold" }}
                     >Reset Password</Text>
-                    <Text className='text-[#7A7B7C]'>Enter your new password</Text>
+                    <Text className='text-[#7A7B7C]' style={{ fontFamily: " Inter_400Regular," }}>Enter your new password</Text>
                 </View>
                 <View className='w-full flex gap-3'>
                     <Input

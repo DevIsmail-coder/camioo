@@ -2,7 +2,7 @@ import { Ionicons } from "@expo/vector-icons";
 import React from "react";
 import { Controller } from "react-hook-form";
 import { Text, TextInput, TouchableOpacity, View } from "react-native";
-import type { InputProps } from "../../types/input";
+import type { InputProps } from "../../types/reuseable-component";
 
 
 

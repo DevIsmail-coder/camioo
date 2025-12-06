@@ -1,6 +1,6 @@
 import { useRouter } from "expo-router";
-import React, { useEffect } from "react";
-import { View } from "react-native";
+import React from "react";
+import { TouchableOpacity, View } from "react-native";
 
 const Index = () => {
   const router = useRouter();
@@ -36,15 +36,18 @@ const Index = () => {
   //   ]).start();
   // }, []);
 
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      router.replace("/(splash)");
-    }, 2000);
-  }, []);
+
+  // useEffect(() => {
+  //   const timeout = setTimeout(() => {
+  //     router.replace("/(splash)");
+  //   }, 2000);
+  // }, []);
 
   return (
     <View className="w-full h-full bg-gradient-to-b from-[#471791] to-[#724DAB] flex items-center justify-center">
-      <View className="w-40 flex items-center gap-0.5">
+      <TouchableOpacity className="w-40 flex items-center gap-0.5" 
+       onPress={() => router.replace("/(splash)")}
+      >
 
         {/* Top row */}
         <View className="w-full h-14 flex flex-row justify-between">
@@ -65,8 +68,7 @@ const Index = () => {
             className="w-[30%] h-full bg-white rounded-br-[5px] flex items-center justify-end"
           > <View  className="w-1 h-0.5 bg-[#471791] rounded-t-[12px]"/> </View>
         </View>
-
-      </View>
+      </TouchableOpacity>
     </View>
   );
 };
