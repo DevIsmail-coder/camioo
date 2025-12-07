@@ -35,7 +35,6 @@ const Index = () => {
   //     }),
   //   ]).start();
   // }, []);
-
   // useEffect(() => {
   //   const timeout = setTimeout(() => {
   //     router.replace("/(splash)");
@@ -67,7 +66,6 @@ const Index = () => {
             className="w-[30%] h-full bg-white rounded-br-[5px] flex items-center justify-end"
           > <View  className="w-1 h-0.5 bg-[#471791] rounded-t-[12px]"/> </View>
         </View>
-
       </TouchableOpacity>
     </View>
   );
