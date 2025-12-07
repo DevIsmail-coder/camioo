@@ -15,21 +15,23 @@ const Successcomponet = ({
 
     return (
         <View className='w-full h-full flex items-center justify-center bg-gradient-to-b from-[#DDD5E9] to-[#F2FDE8]'>
-            <View className='w-[90%] min-h-[80%] flex items-center flex-col bg-blue-500' 
-            style={{alignItems: "center", justifyContent: 'flex-end', flexDirection: 'column'}}
+            <View className='w-[90%] min-h-[80%] flex items-center justify-between flex-col bg-blue-500' 
+            style={{display: 'flex', alignItems: "center", minHeight: '80%',  justifyContent: 'space-between', flexDirection: 'column',}}
             >
                 <View className='flex items-center justify-center gap-4'>
                     <Image />
                 <Text className='text-[#111827] text-[25px]' 
-                     style={{ fontFamily: "Nunito_700Bold" }}>
+                     style={{ fontFamily: "Nunito_700Bold", paddingTop: 40 }}>
                     {head}
                 </Text> 
                 <Text className='text-[#7A7B7C]'
-                 style={{ fontFamily: "Inter_400Regular," }}> 
+                 style={{ fontFamily: "Inter_400Regular", textAlign: 'center', }}> 
                     {message} </Text>
                 </View>
                 <View className='w-full'>
-                    <Button title={titles} onPress={() => router.push(route as any)} />
+                    <Button title={titles} onPress={() => router.push(route as any)} 
+                    //  style={{ fontFamily: "Inter_400Regular"}} 
+                     />
                 </View>
             </View>
         </View>

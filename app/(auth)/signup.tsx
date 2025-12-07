@@ -33,7 +33,6 @@ const Signup = () => {
          titles="Continue" route="/(auth)" head="Your account is ready" />
     }
 
-        
     return (
         <View className='w-full h-full flex items-center justify-center bg-gradient-to-b from-[#DDD5E9] to-[#F2FDE8]'>
             <View className='w-[90%] min-h-h-[85%] bg-white rounded-[12px] flex items-center shodow-lg bg-gradient-to-b from-[#F2EFF7] to-[#FAFEF7] py-5 px-3 gap-6'>

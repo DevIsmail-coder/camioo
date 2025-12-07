@@ -35,8 +35,6 @@ const Index = () => {
   //     }),
   //   ]).start();
   // }, []);
-
-
   // useEffect(() => {
   //   const timeout = setTimeout(() => {
   //     router.replace("/(splash)");
