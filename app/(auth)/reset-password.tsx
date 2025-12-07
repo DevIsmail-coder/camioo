@@ -1,5 +1,6 @@
 import Button from '@/components/ui/button';
 import Input from '@/components/ui/input';
+import Successcomponet from '@/components/ui/success';
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useRouter } from 'expo-router';
 import React from 'react';
@@ -8,6 +9,7 @@ import { Text, View } from 'react-native';
 import { resetpasswordSchema } from '../../schema/reset-password-schema';
 
 const Resetpassword = () => {
+        const [Success, setSuccess] = React.useState(false);
 
     const router = useRouter();
 
@@ -22,6 +24,12 @@ const Resetpassword = () => {
         },
         resolver: yupResolver(resetpasswordSchema),
     });
+
+        if (Success === true) {
+       return <Successcomponet message="You can now sign in with your new password." 
+         titles="Return to Login" route="/(auth)" head="Password reset complete" />
+    }
+
 
 
     return (
@@ -53,7 +61,7 @@ const Resetpassword = () => {
                     />
                 </View>
                 <View className='w-full flex gap-3'>
-                    <Button title='Confirm' onPress={() => router.push("/(auth)/forget-password")} />
+                    <Button title='Confirm' onPress={() => setSuccess(true)} />
                 </View>
             </View>
         </View>
