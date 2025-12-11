@@ -68,7 +68,7 @@ const Index = () => {
                     />
                 </View>
                 <View className='w-full flex gap-3'>
-                    <Button title='Log in' onPress={() => router.push("/(auth)/signup")} />
+                    <Button title='Log in' onPress={() => router.push("/(create-events)")} />
                         <Text className='flex flex-row items-center justify-center gap-2' style={{ fontFamily: " Inter_400Regular," }} >Don’t have an account? <Text className="cursor-pointer text-[#512F84]" onPress={() => router.push("/(auth)/forget-password")} style={{ fontFamily: " Inter_400Regular," }} >Sign Up</Text></Text>
                 </View>
             </View>
