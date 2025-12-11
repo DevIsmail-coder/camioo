@@ -44,6 +44,7 @@ const Forgetpassword = () => {
                 </View>
                 <View className='w-full flex gap-3'>
                     <Button title='Confirm' onPress={() => router.push("/")} />
+
                 </View>
             </View>
         </View>

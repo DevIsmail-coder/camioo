@@ -9,7 +9,7 @@ import { Text, View } from 'react-native';
 import { resetpasswordSchema } from '../../schema/reset-password-schema';
 
 const Resetpassword = () => {
-        const [Success, setSuccess] = React.useState(false);
+        const [Success, setSuccess] = React.useState(false);ent
 
     const router = useRouter();
 
@@ -29,8 +29,6 @@ const Resetpassword = () => {
        return <Successcomponet message="You can now sign in with your new password." 
          titles="Return to Login" route="/(auth)" head="Password reset complete" />
     }
-
-
 
     return (
         <View className='w-full h-full flex items-center justify-center bg-gradient-to-b from-[#DDD5E9] to-[#F2FDE8]'>
