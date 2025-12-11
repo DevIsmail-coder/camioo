@@ -29,7 +29,7 @@ export default function Input({
           <View className="mb-4 w-full flex gap-2">
             <Text 
             style={{ color: "#525454", fontFamily: " Inter_400Regular," }}
-            >{title}</Text>
+            >{title}?</Text>
             <View
               className="flex-row items-center rounded-2sm"
               style={{

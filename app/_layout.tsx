@@ -39,15 +39,19 @@ export default function RootLayout() {
           } />
         <Stack.Screen
           name="(auth)"
-          options={{
-            headerShown: false,
-          }}
+          options={{ headerShown: false, }}
         />
         <Stack.Screen
           name="(splash)"
-          options={{
-            headerShown: false,
-          }}
+          options={{ headerShown: false, }}
+        />
+        <Stack.Screen
+          name="(create-events)"
+          options={{ headerShown: false, }}
+        />
+        <Stack.Screen
+          name="(events)"
+          options={{ headerShown: false, }}
         />
       </Stack>
     </ThemeProvider>
